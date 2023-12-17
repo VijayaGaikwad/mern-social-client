@@ -10,3 +10,27 @@
     flex-direction: column;
     gap: 1rem;
 }
+
+/* Media query for screens 600px and smaller */
+@media only screen and (max-width: 600px) {
+    .Profile{
+      grid-template-columns: auto;
+  }
+
+}
+  
+    
+    /* Media query for screens 900px and smaller */
+    @media only screen and (max-width: 1000px) {
+        .Profile{
+        grid-template-columns: auto;
+    }
+    
+    }
+    
+    /* Media query for screens 1200px and smaller */
+    @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+      .Profile{
+        grid-template-columns: 16rem auto 15rem;
+    }
+    }

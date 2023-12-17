@@ -24,3 +24,20 @@
 {
     font-size: 13px;
 }
+
+/* Media query for screens 600px and smaller */
+@media only screen and (max-width: 600px) {
+    .TrendCard{
+        display: none;
+    }
+    
+  
+    }
+    
+    /* Media query for screens 900px and smaller */
+    @media only screen and (max-width: 1000px) {
+        .TrendCard{
+            display: none;
+        }
+    }
+    

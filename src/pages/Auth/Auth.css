@@ -92,3 +92,19 @@
       align-items: center;
       justify-content: center;
   }
+
+  /* Media query for screens 600px and smaller */
+@media only screen and (max-width: 600px) {
+  .Auth {
+    display: block;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 1rem;
+  }
+  .infoInput{
+    padding: 10px;
+    flex:1;
+    width: 80%;
+  }
+ 
+}

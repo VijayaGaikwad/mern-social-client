@@ -5,3 +5,27 @@
     align-items: center;
     overflow: auto;
 }
+
+/* Media query for screens 600px and smaller */
+@media only screen and (max-width: 600px) {
+    .ProfileSide {
+        flex-direction: column;
+        overflow: auto;
+    }
+  }
+  
+  /* Media query for screens 900px and smaller */
+  @media only screen and (max-width: 900px) {
+    .ProfileSide {
+        flex-direction: column;
+        overflow: auto;
+    }
+  }
+  
+  /* Media query for screens 1200px and smaller */
+  @media only screen and (max-width: 1200px) {
+    .ProfileSide {
+        flex-direction: column;
+        overflow: auto;
+    }
+  }

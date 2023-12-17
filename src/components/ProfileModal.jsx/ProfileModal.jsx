@@ -1,9 +1,10 @@
-import { Modal, useMantineTheme } from "@mantine/core";
+import { Modal, useMantineTheme} from "@mantine/core";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { uploadImage } from "../../actions/uploadAction";
 import { updateUser } from "../../actions/UserAction";
+import { useMediaQuery } from "@mantine/hooks";
 
 function ProfileModal({ modalOpened, setModalOpened, data }) {
   const theme = useMantineTheme();
@@ -14,6 +15,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
   const dispatch = useDispatch();
   const param = useParams();
   const {user} = useSelector((state)=> state.authReducer.authData)
+  const isMobile = useMediaQuery('(max-width: 600px)');
 
   const handlechange = (e)=> {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -66,7 +68,8 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size="55%"
+      fullScreen={isMobile}
+      size="90%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
@@ -136,9 +139,9 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
         </div>
 
 
-        <div>
+        <div >
             Profile Image 
-            <input type="file" name='profileImage' onChange={onImageChange}/>
+            <input type="file" name='profileImage' onChange={onImageChange} />
             Cover Image
             <input type="file" name="coverImage" onChange={onImageChange} />
         </div>
@@ -148,5 +151,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
     </Modal>
   );
 }
+
+
 
 export default ProfileModal;

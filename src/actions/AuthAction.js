@@ -8,6 +8,7 @@ export const logIn = (formData) => async (dispatch) => {
     } catch (error) {
       console.log(error);
       dispatch({ type: "AUTH_FAIL" });
+      alert("Data is incorrect. Please check your Username and Password")
     }
   };
 

@@ -4,3 +4,32 @@
     grid-template-columns: 18rem auto 20rem;
     gap: 1rem;
 }
+
+/* Media query for screens 600px and smaller */
+@media only screen and (max-width: 600px) {
+  .Home{
+    grid-template-columns: auto;  
+}
+.RightSide{
+  grid-row: 1;
+}
+
+  }
+  
+  /* Media query for screens 900px and smaller */
+  @media only screen and (max-width: 1000px) {
+    .Home{
+      grid-template-columns: auto;
+  }
+  .RightSide{
+    grid-row: 1;
+  }
+
+  }
+  
+  /* Media query for screens 1200px and smaller */
+  @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .Home{
+      grid-template-columns: 16rem auto 15rem;
+  }
+  }
